@@ -7,7 +7,10 @@
 <body ng-controller="FinanceController">
 	<div class="wrapper">
 		<h1>{{ title }}</h1>
-		<p>Total: {{ stocks.length }}. Search: <input ng-model="query"></p>
+		<p>
+			Total: {{ stocks.length }} <br>
+		   	Search: <input ng-model="query">
+		</p>
 		<ul ng-repeat="stock in stocks | filter:query">
 			<li>{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
