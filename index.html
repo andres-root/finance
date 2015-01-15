@@ -8,8 +8,8 @@
 	<div class="wrapper">
 		<h1>{{ title }}</h1>
 		<p>
-		   	Search: <input ng-model="query">
-			Total: {{ stocks.length }} <br>
+		   	Search: <input ng-model="query"> <br>
+			Total: {{ stocks.length }}
 		</p>
 		<ul ng-repeat="stock in stocks | filter:query">
 			<li>{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
