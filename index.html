@@ -13,7 +13,7 @@
 		</p>
 			Found: {{ query.length }}
 		<ul>
-			<li ng-repeat="stock in stocks | filter:query">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
+			<li ng-repeat="stock in filtered = ( stocks | filter:query )">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
 	</div>
 	<script src="content/components/jquery/dist/jquery.min.js"></script>
