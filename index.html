@@ -11,7 +11,7 @@
 		<p>
 		   	Search: <input ng-model="query">
 		</p>
-			Found: {{ query.length }}
+			Found: {{ filtered.length }}
 		<ul>
 			<li ng-repeat="stock in filtered = ( stocks | filter:query )">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
