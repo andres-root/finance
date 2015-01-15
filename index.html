@@ -7,7 +7,7 @@
 <body ng-controller="FinanceController">
 	<div class="wrapper">
 		<h1>{{ title }}</h1>
-		<p>Total: {{ stocks.length }}
+		<p>Total: {{ stocks.length }}</p>
 		<ul ng-repeat="stock in stocks">
 			<li>{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
