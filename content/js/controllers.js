@@ -1,3 +1,5 @@
+'use strict';
+
 var FinanceApp = angular.module('FinanceApp', []);
 
 FinanceApp.controller('FinanceController', function ($scope) {
