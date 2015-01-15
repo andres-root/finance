@@ -8,6 +8,9 @@
 	<div class="wrapper">
 		<h1>{{ title }}</h1>
 		<p>Total: {{ stocks.length }}
+		<ul ng-repeat="stock in stocks">
+			<li>{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
+		</ul>
 	</div>
 	<script src="content/components/jquery/dist/jquery.min.js"></script>
 	<script src="content/components/bootstrap/dist/js/bootstrap.min.js"></script>
