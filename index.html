@@ -11,9 +11,9 @@
 		<p>
 		   	Search: <input ng-model="query">
 		</p>
-			Found: {{ stocks.length }}
+			Found: {{ $scope.filtered.length }}
 		<ul>
-			<li ng-repeat="stock in stocks = ( data| filter:query )">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
+			<li ng-repeat="stock in stocks | filter:query">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
 	</div>
 	<script src="content/components/jquery/dist/jquery.min.js"></script>
