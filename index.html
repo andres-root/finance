@@ -10,10 +10,15 @@
 		<h1>{{ title }}</h1>
 		<p>
 		   	Search: <input ng-model="query">
+		   	<select ng-model="orderProp">
+  				<option value="company">Company</option>
+  				<option value="stock">Stock name</option>
+  				<option value="value">Value</option>
+			</select>
 		</p>
 			Found: {{ filtered.length }}
 		<ul>
-			<li ng-repeat="stock in filtered = ( stocks | filter:query )">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
+			<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">{{ stock.company }} - {{ stock.name }} - {{ stock.value }}</li>
 		</ul>
 	</div>
 	<script src="content/components/jquery/dist/jquery.min.js"></script>
