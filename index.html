@@ -21,7 +21,9 @@
 		</p>
 			Found: {{ filtered.length }}
 		<ul>
-			<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">{{ stock.company }} - {{ stock.name }} - {{ stock.value | currency }}</li>
+			<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">
+				<img ng-src="content/img/{{ stock.image }}" {{ stock.company }} - {{ stock.name }} - {{ stock.value | currency }}
+			</li>
 		</ul>
 	</div>
 	<script src="content/components/jquery/dist/jquery.min.js"></script>
