@@ -22,7 +22,10 @@
 			Found: {{ filtered.length }}
 		<ul>
 			<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">
-				<img ng-src="content/img/{{ stock.image }}" {{ stock.company }} - {{ stock.name }} - {{ stock.value | currency }}
+				<img ng-src="content/img/{{ stock.image }}">
+				<p>
+					{{ stock.company }} - {{ stock.name }} - {{ stock.value | currency }}
+				</p>
 			</li>
 		</ul>
 	</div>
