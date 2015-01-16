@@ -30,7 +30,7 @@
 		</ul>
 		<div class="data">
 			<pre>
-				{{ stocks | json }}
+				{{ stocks | filter:query | orderBy:orderProp | json }}
 			</pre>
 		</div>
 	</div>
