@@ -1,17 +1,23 @@
 <div class="container-fluid">
-	<h1>{{ title }}</h1>
-	<p>
-	   	Search: 
-	   	<input ng-model="query">
-	   	
-	   	Order by: 
-	   	<select ng-model="orderProp">
-				<option value="company">Company</option>
-				<option value="stock">Stock name</option>
-				<option value="value">Value</option>
-		</select>
-	</p>
-		Found: {{ filtered.length }}
+	<div class="row">
+		<div class="col-md-2">
+			
+		</div>
+		<div class="col-md-10">
+			<p>
+			   	Search: 
+			   	<input ng-model="query">
+			   	
+			   	Order by: 
+			   	<select ng-model="orderProp">
+						<option value="company">Company</option>
+						<option value="stock">Stock name</option>
+						<option value="value">Value</option>
+				</select>
+			</p>
+			Found: {{ filtered.length }}
+		</div>
+	</div>
 	<ul>
 		<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">
 			<a href="#/stocks/{{ stock.id }}" class="thumb">
