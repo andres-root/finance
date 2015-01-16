@@ -9,5 +9,5 @@ FinanceApp.controller('FinanceController', function ($scope) {
 		{"company": "facebook", "name": "fb", "value": 900.0, "image": "facebook.png"},
 		{"company": "twitter", "name": "tw", "value": 800.0, "image": "twitter.jpg"}
 	];
-	$scope.orderProp = 'value';
+	$scope.orderProp = '-value';
 });
