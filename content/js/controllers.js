@@ -2,8 +2,10 @@
 
 var FinanceApp = angular.module('FinanceApp', []);
 
-FinanceApp.controller('FinanceController', function ($scope) {
+FinanceApp.controller('FinanceController', function ($scope, $http) {
 	$scope.title = 'Stock Market';
-	$scope.stocks = [];
+	$http.get('data.json').sucess(function (data) {
+		$scope.stocks = data;
+	});
 	$scope.orderProp = '-value';
 });
