@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<h1>{{ title }}</h1>
+	<p>
+	   	Search: 
+	   	<input ng-model="query">
+	   	
+	   	Order by: 
+	   	<select ng-model="orderProp">
+				<option value="company">Company</option>
+				<option value="stock">Stock name</option>
+				<option value="value">Value</option>
+		</select>
+	</p>
+		Found: {{ filtered.length }}
+	<ul>
+		<li ng-repeat="stock in filtered = ( stocks | filter:query | orderBy:orderProp )">
+			<a href="#/stocks/{{ stock.id }}" class="thumb">
+				<img ng-src="content/img/{{ stock.image }}" width="50px" height="50px">
+			</a>
+			<p>
+				{{ stock.company }} - {{ stock.name }} - {{ stock.value | currency }}
+			</p>
+		</li>
+	</ul>
+	<div class="data">
+		<pre>
+			{{ stocks | filter:query | orderBy:orderProp | json }}
+		</pre>
+	</div>
+</div>
