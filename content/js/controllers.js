@@ -1,6 +1,6 @@
 'use strict';
 
-var financeApp = angular.module('FinanceApp', []);
+var financeApp = angular.module('financeApp', []);
 
 financeApp.controller('FinanceController', function ($scope, $http) {
 	$scope.title = 'Stock Market';
