@@ -10,8 +10,10 @@ financeControllers.controller('StocksController', ['$scope', '$http',
 	}
 ]);
 
-financeControllers.controller('StockController', ['$scope', '$routeParams',
-	function ($scope, $routeParams) {
-		$scope.stockId = $routeParams.stockId;
-	}
-]);
+financeControllers.controller('StockController', ['$scope', '$routeParams', '$http'
+	function ($scope, $routeParams, $http) {
+		$http.get($routeParams.stockName + '.json').success(function(data) {
+			$scope.stock = data;
+		});
+	}]
+);
