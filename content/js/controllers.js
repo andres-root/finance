@@ -10,7 +10,7 @@ financeControllers.controller('StocksController', ['$scope', '$http',
 	}
 ]);
 
-financeControllers.controller('StockController', ['$scope' '$routeParams',
+financeControllers.controller('StockController', ['$scope', '$routeParams',
 	function ($scope, $routeParams) {
 		$scope.stockId = $routeParams.stockId;
 	}
