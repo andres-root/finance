@@ -5,7 +5,7 @@ financeApp.config(['$routeProvider',
 		$routeProvider.when('/stocks', {
 			templateUrl: 'partials/stocks.html',
 			controller: 'StocksController'
-		}).when('/stocks/:stockId', {
+		}).when('/stocks/:stockName', {
 			templateUrl: 'partials/stock.html',
 			controller: 'StockController'
 		}).otherwise({
