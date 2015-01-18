@@ -4,10 +4,10 @@ financeApp.config(['$routeProvider',
 	function ($routeProvider) {
 		$routeProvider.when('/stocks', {
 			templateUrl: 'templates/stocks.html',
-			controller: 'stocksController'
+			controller: 'StocksController'
 		}).when('/stocks/:stockId', {
 			templateUrl: 'templates/stock.html',
-			controller: 'stockController'
+			controller: 'StockController'
 		}).otherwise({
 			redirectTo: '/stocks'
 		});

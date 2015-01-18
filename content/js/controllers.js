@@ -1,8 +1,7 @@
-'use strict';
 
-var financeApp = angular.module('financeApp', []);
+var financeControllers = angular.module('financeControllers', []);
 
-financeApp.controller('FinanceController', function ($scope, $http) {
+financeControllers.controller('StocksController', function ($scope, $http) {
 	$scope.title = 'Stock Market';
 	$http.get('data.json').success(function (data) {
 		$scope.stocks = data;
