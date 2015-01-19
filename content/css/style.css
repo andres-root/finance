@@ -54,6 +54,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-body {
+.sidebar {
+  background-color: #eeeeee;
+}
+
+.content {
   background-color: #eeeeee;
 }
