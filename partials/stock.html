@@ -2,3 +2,8 @@
 <h1>{{ stock.company }}</h1>
 <h3> {{ stock.name }}</h3>
 <p>{{ stock.value | currency }}</p>
+<div class="data">
+	<pre>
+		{{ stocks | filter:query | orderBy:orderProp | json }}
+	</pre>
+</div>
