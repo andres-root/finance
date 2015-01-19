@@ -53,3 +53,8 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #eeeeee;
+}

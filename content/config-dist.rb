@@ -11,6 +11,7 @@ sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
 project_path = "content"
+preferred_syntax = :sass
 #asset_cache_buster = false
 
 # For source maps
